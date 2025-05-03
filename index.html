@@ -1,63 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Skand Sharma – Product + Chaos + Coffee</title>
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/17942/17942573.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skand Sharma</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/17942/17942573.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <section class="hero fade-in">
-    <h1>Yo, I’m Skand 👋</h1>
-    <p>
-      Think of me as your product nerd next door—part strategist, part doodler, full-time idea hoarder. 
-      I help map journeys, ship solutions, and sometimes draw velociraptors in wireframes.
-    </p>
-    <p><em>Currently chasing PM dreams and dodging scope creep.</em></p>
-  </section>
+    <header class="hero">
+        <h1>Skand Sharma</h1>
+        <p>A product mind with a sketchpad soul.</p>
+        <div class="hero-buttons">
+            <a href="assets/Skand_Sharma_Resume.pdf" class="btn" download>Download Resume</a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+    </header>
 
-  <section class="grid-section fade-in">
-    <h2>🧰 What I Tinker With</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="https://source.unsplash.com/600x400/?ux,flow" alt="UX Projects" />
-        <a href="https://nextleap.app/portfolio/skand-sharma" target="_blank">Product Experiments & UX Teardowns</a>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/600x400/?code,developer" alt="Code Projects" />
-        <a href="https://github.com/skand1110/" target="_blank">Software Shenanigans on GitHub</a>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/600x400/?writing,typewriter" alt="Poetry and Blogs" />
-        <a href="https://skandjsharma.blogspot.com/" target="_blank">Poetry & Creative Rants</a>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/600x400/?productivity,medium" alt="Product Thinking" />
-        <a href="https://medium.com/@skandjsharma" target="_blank">My PM Journey – Blog Posts & Rants</a>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/600x400/?illustration,art" alt="Art Portfolio" />
-        <a href="https://www.instagram.com/skizzielie/" target="_blank">Art, Sketches & Unfinished Experiments</a>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/600x400/?bookshelf,library" alt="Goodreads" />
-        <a href="https://www.goodreads.com/user/show/56849520-skand-sharma" target="_blank">Books I Devoured (or Pretended To)</a>
-      </div>
-    </div>
-  </section>
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <p>
+            Hi! I'm Skand — I map user journeys with logic and wireframes with flair.
+            My path has wandered through code, design, art, and now product. If it involves people,
+            problems, and pixels, you’ll find me deep in it (and probably thinking about it at 2am).
+        </p>
+    </section>
 
-  <section class="contact fade-in">
-    <h2>💌 Ping Me</h2>
-    <p>
-      Want to collaborate? Curious about my favorite Figma shortcut? Or just want to argue over whether tabs are better than spaces? <br>
-      I’m all ears.
-    </p>
-    <p><a href="mailto:skandjsharma@gmail.com">skandjsharma@gmail.com</a></p>
-  </section>
+    <section class="tinker" id="tinker">
+        <h2>What I Tinker With</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="assets/product.svg" alt="Product Strategy Illustration">
+                <h3>Product Strategy</h3>
+                <p>
+                    Breakdowns, teardowns, frameworks, and user journeys
+                    from my experiments in product thinking.
+                </p>
+                <a href="https://nextleap.app/portfolio/skand-sharma" class="btn">View Work</a>
+            </div>
+            <div class="card">
+                <img src="assets/github.svg" alt="Tech Projects Illustration">
+                <h3>Software Projects</h3>
+                <p>
+                    Code experiments, tools, and builds — all hosted
+                    on GitHub and curated with care.
+                </p>
+                <a href="https://github.com/skand1110/" class="btn">Explore GitHub</a>
+            </div>
+            <div class="card">
+                <img src="assets/blog.svg" alt="Blog Illustration">
+                <h3>Creative Writing</h3>
+                <p>
+                    A blog page where I<br>
+                    write poems quite frequently;<br>
+                    all except Haikus.
+                </p>
+                <a href="https://skandjsharma.blogspot.com/" class="btn">Read Blog</a>
+            </div>
+            <div class="card">
+                <img src="assets/medium.svg" alt="Medium Illustration">
+                <h3>Product Insights</h3>
+                <p>
+                    Notes from my journey into PM-ing — user stories,
+                    experiments, reflections, and frameworks.
+                </p>
+                <a href="https://medium.com/@skandjsharma" class="btn">View Insights</a>
+            </div>
+            <div class="card">
+                <img src="assets/art.svg" alt="Art Portfolio Illustration">
+                <h3>Art Portfolio</h3>
+                <p>
+                    From character sketches to motion tests —
+                    a peek into my visual storytelling.
+                </p>
+                <a href="https://www.instagram.com/skizzielie/" class="btn">See Art</a>
+            </div>
+            <div class="card">
+                <img src="assets/books.svg" alt="Bookshelf Illustration">
+                <h3>Book Shelf</h3>
+                <p>
+                    Goodreads page where I catalog ideas disguised
+                    as books — mostly non-fiction, mostly nerdy.
+                </p>
+                <a href="https://www.goodreads.com/user/show/56849520-skand-sharma" class="btn">Browse Reads</a>
+            </div>
+        </div>
+    </section>
 
-  <script src="app.js"></script>
+    <section class="contact" id="contact">
+        <h2>Let’s Connect</h2>
+        <p>
+            For collabs, book recs, creative detours, or product chats — I’m one click away.
+        </p>
+        <a href="mailto:skandjsharma@gmail.com" class="btn">Contact Me</a>
+    </section>
+
+    <footer>
+        <p>© Skand Sharma • Made with curiosity & caffeine</p>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
+
 </html>
