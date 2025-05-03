@@ -1,58 +1,83 @@
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #fafafa;
-  color: #333;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  background-color: #fdfdfd;
+  color: #222;
 }
 
-.hero {
-  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
-  padding: 4rem 1rem;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  font-weight: 800;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  margin-top: 1rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.section {
-  padding: 4rem 1rem;
-}
-
-.section-title {
-  font-size: 1.8rem;
+h1, h2 {
   font-weight: 700;
-  margin-bottom: 2rem;
-  text-align: center;
 }
 
-.card-img {
+.hero, .contact {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: #fff8f0;
+}
+
+.grid-section {
+  padding: 4rem 1rem;
+  background: #f0f4ff;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  max-width: 320px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
   width: 100%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.link-box a {
+.card a {
   display: block;
-  margin-bottom: 1rem;
+  text-align: center;
+  padding: 1rem;
   font-weight: 600;
   color: #0056b3;
   text-decoration: none;
-  transition: all 0.3s ease;
 }
 
-.link-box a:hover {
-  color: #003d80;
+.card a:hover {
   text-decoration: underline;
+  color: #003e7a;
+}
+
+.contact a {
+  font-weight: 600;
+  color: #d33;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
