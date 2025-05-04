@@ -88,6 +88,7 @@ body {
 .card a:hover {
   text-decoration: underline;
   color: #003e7a;
+  text-align: center;
 }
 
 .card-img {
@@ -102,6 +103,7 @@ body {
   max-width: 220px;
   padding: 0 0.5rem;
   line-height: 1.4;
+  text-align: center;
 }
 
 /* Link box styling */
