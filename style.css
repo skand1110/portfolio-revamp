@@ -145,6 +145,26 @@ body {
   pointer-events: none;
 }
 
+.contact-section {
+  background: linear-gradient(135deg, #f0f4ff 0%, #e4ebff 100%);
+  padding: 4rem 1rem;
+}
+
+.contact-section .section-title {
+  color: #1a1a1a;
+}
+
+.contact-section a {
+  color: #0056b3;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-section a:hover {
+  color: #003d80;
+  text-decoration: underline;
+}
+
 .scribble-link:hover::after {
   opacity: 1;
   transform: scaleX(1);
