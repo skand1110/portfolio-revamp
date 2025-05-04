@@ -36,6 +36,50 @@ body {
   text-align: center;
 }
 
+.grid-section {
+  padding: 4rem 1rem;
+  background: #f0f4ff;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  max-width: 320px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card a {
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  font-weight: 600;
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+  color: #003e7a;
+}
+
 .card-img {
   width: 100%;
   height: auto;
