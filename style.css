@@ -59,6 +59,7 @@ body {
 .card {
   background: white;
   border-radius: 1rem;
+  padding: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   overflow: hidden;
   max-width: 320px;
@@ -93,10 +94,12 @@ body {
 
 .card-img {
   width: 100%;
+  margin-bottom: 1rem;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
+
 .card-desc {
   font-size: 0.95rem;
   color: var(--text-color, #333);
@@ -104,6 +107,7 @@ body {
   margin: 0 auto;  
   padding: 0 0.5rem;
   line-height: 1.4;
+  max-width: 90%;
 }
 
 /* Link box styling */
