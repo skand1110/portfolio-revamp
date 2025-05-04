@@ -49,42 +49,30 @@ body {
 }
 
 .card {
-  background: white;
-  border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   transition: transform 0.3s ease;
 }
 
-.card:hover {
-  transform: scale(1.03);
-}
-
-.card img {
-  width: 100%;
+.card a img {
+  max-width: 220px;
   height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
 }
 
-.card a {
-  display: block;
-  text-align: center;
-  padding: 1rem;
-  font-weight: 600;
-  color: #0056b3;
-  text-decoration: none;
+.card a:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-.card a:hover {
-  text-decoration: underline;
-  color: #003e7a;
-}
-
-.card-img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+.card-desc {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: var(--text-color, #333);
+  max-width: 220px;
 }
 
 .link-box a {
