@@ -11,8 +11,20 @@
 }
 
 body.dark-mode .contact-section {
-  background-color: #1e1e1e;
+  background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%) !important;
   color: #f0f0f0;
+}
+
+body.dark-mode .contact-section a {
+  color: #9ecbff;
+}
+
+body.dark-mode .contact-section a:hover {
+  color: #c0e8ff;
+}
+
+body.dark-mode a {
+  color: #9ecbff;
 }
 
 #dark-mode-toggle:hover {
