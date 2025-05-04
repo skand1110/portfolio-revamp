@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Fade-in animation logic
   const fadeElems = document.querySelectorAll(".fade-in");
 
   const observer = new IntersectionObserver(entries => {
@@ -10,4 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { threshold: 0.1 });
 
   fadeElems.forEach(el => observer.observe(el));
+
+  // Dark mode toggle logic
+  const toggle = document.getElementById("dark-mode-toggle");
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+  }
 });
