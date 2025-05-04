@@ -2,107 +2,81 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skand Sharma</title>
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/17942/17942573.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skand Sharma</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/17942/17942573.png" type="image/png">
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header class="hero">
-        <h1>Skand Sharma</h1>
-        <p>A product mind with a sketchpad soul.</p>
-        <div class="hero-buttons">
-            <a href="assets/Skand_Sharma_Resume.pdf" class="btn" download>Download Resume</a>
-            <a href="#contact" class="btn btn-secondary">Contact Me</a>
-        </div>
-    </header>
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">Skand Sharma</div>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <section class="about" id="about">
-        <h2>About Me</h2>
-        <p>
-            Hi! I'm Skand — I map user journeys with logic and wireframes with flair.
-            My path has wandered through code, design, art, and now product. If it involves people,
-            problems, and pixels, you’ll find me deep in it (and probably thinking about it at 2am).
-        </p>
-    </section>
+  <section class="hero">
+    <h1>Hi, I'm Skand</h1>
+    <p>Balancing product strategy with storytelling, one sketch (or slide) at a time.</p>
+    <div class="hero-buttons">
+      <a href="assets/Skand_Sharma_Resume.pdf" class="btn" download>Download Resume</a>
+      <a href="#contact" class="btn">Contact Me</a>
+    </div>
+  </section>
 
-    <section class="tinker" id="tinker">
-        <h2>What I Tinker With</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="assets/product.svg" alt="Product Strategy Illustration">
-                <h3>Product Strategy</h3>
-                <p>
-                    Breakdowns, teardowns, frameworks, and user journeys
-                    from my experiments in product thinking.
-                </p>
-                <a href="https://nextleap.app/portfolio/skand-sharma" class="btn">View Work</a>
-            </div>
-            <div class="card">
-                <img src="assets/github.svg" alt="Tech Projects Illustration">
-                <h3>Software Projects</h3>
-                <p>
-                    Code experiments, tools, and builds — all hosted
-                    on GitHub and curated with care.
-                </p>
-                <a href="https://github.com/skand1110/" class="btn">Explore GitHub</a>
-            </div>
-            <div class="card">
-                <img src="assets/blog.svg" alt="Blog Illustration">
-                <h3>Creative Writing</h3>
-                <p>
-                    A blog page where I<br>
-                    write poems quite frequently;<br>
-                    all except Haikus.
-                </p>
-                <a href="https://skandjsharma.blogspot.com/" class="btn">Read Blog</a>
-            </div>
-            <div class="card">
-                <img src="assets/medium.svg" alt="Medium Illustration">
-                <h3>Product Insights</h3>
-                <p>
-                    Notes from my journey into PM-ing — user stories,
-                    experiments, reflections, and frameworks.
-                </p>
-                <a href="https://medium.com/@skandjsharma" class="btn">View Insights</a>
-            </div>
-            <div class="card">
-                <img src="assets/art.svg" alt="Art Portfolio Illustration">
-                <h3>Art Portfolio</h3>
-                <p>
-                    From character sketches to motion tests —
-                    a peek into my visual storytelling.
-                </p>
-                <a href="https://www.instagram.com/skizzielie/" class="btn">See Art</a>
-            </div>
-            <div class="card">
-                <img src="assets/books.svg" alt="Bookshelf Illustration">
-                <h3>Book Shelf</h3>
-                <p>
-                    Goodreads page where I catalog ideas disguised
-                    as books — mostly non-fiction, mostly nerdy.
-                </p>
-                <a href="https://www.goodreads.com/user/show/56849520-skand-sharma" class="btn">Browse Reads</a>
-            </div>
-        </div>
-    </section>
+  <section class="about">
+    <p>
+      I’m a product manager in the making who thinks in flows, talks in metaphors, and sometimes wireframes in rhyme.
+      My work spans user research, journey mapping, and solving for edge cases with as much enthusiasm as sketching a visual metaphor for them.
+    </p>
+  </section>
 
-    <section class="contact" id="contact">
-        <h2>Let’s Connect</h2>
-        <p>
-            For collabs, book recs, creative detours, or product chats — I’m one click away.
-        </p>
-        <a href="mailto:skandjsharma@gmail.com" class="btn">Contact Me</a>
-    </section>
+  <section class="projects" id="projects">
+    <div class="project-card">
+      <h3><a href="https://nextleap.app/portfolio/skand-sharma" target="_blank">Product Portfolio</a></h3>
+      <p>Teardowns, user journeys, strategy docs, and wireframes—collected from my explorations as a PM-in-progress.</p>
+    </div>
+    <div class="project-card">
+      <h3><a href="https://github.com/skand1110" target="_blank">Software Projects</a></h3>
+      <p>Code experiments and tech builds—part learning lab, part documentation of my curious tendencies.</p>
+    </div>
+    <div class="project-card">
+      <h3><a href="https://skandjsharma.blogspot.com/" target="_blank">Poetry & Blog</a></h3>
+      <p>A blog page where I write poems quite frequently; all except haikus.</p>
+    </div>
+    <div class="project-card">
+      <h3><a href="https://medium.com/@skandjsharma" target="_blank">Product Insights</a></h3>
+      <p>Case studies, UX breakdowns, and notes on my PM journey—long reads with just enough punchlines.</p>
+    </div>
+    <div class="project-card">
+      <h3><a href="https://www.instagram.com/skizzielie/" target="_blank">Art Portfolio</a></h3>
+      <p>Drawings, illustrations, and animation attempts—this is where the visual storytelling lives.</p>
+    </div>
+    <div class="project-card">
+      <h3><a href="https://www.goodreads.com/user/show/56849520-skand-sharma" target="_blank">Goodreads</a></h3>
+      <p>My digital bookshelf—because product people are powered by fiction, non-fiction, and occasional fantasy.</p>
+    </div>
+  </section>
 
-    <footer>
-        <p>© Skand Sharma • Made with curiosity & caffeine</p>
-    </footer>
-
-    <script src="app.js"></script>
+  <section class="contact" id="contact">
+    <h2>Let’s connect</h2>
+    <p>Reach out for collabs, book recs, or just to say hi. Always up for a chat.</p>
+    <a href="mailto:skandjsharma@gmail.com" class="btn">Contact Me</a>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/skand-sharma/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/skizzielie/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/skand1110" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </section>
 </body>
 
 </html>
