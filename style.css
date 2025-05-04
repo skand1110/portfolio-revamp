@@ -100,10 +100,10 @@ body {
 .card-desc {
   font-size: 0.95rem;
   color: var(--text-color, #333);
-  max-width: 220px;
+  text-align: center;
+  margin: 0 auto;  
   padding: 0 0.5rem;
   line-height: 1.4;
-  text-align: center;
 }
 
 /* Link box styling */
