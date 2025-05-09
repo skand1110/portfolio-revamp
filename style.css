@@ -313,7 +313,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: none;
+  background: #1e3a8a;
   padding: 0.5rem 1rem;
   border-bottom: 1px solid #ddd;
 }
@@ -360,7 +360,7 @@ body.dark-mode #chat-window {
 }
 
 body.dark-mode .chat-header {
-  background: #1e1e1e;
+  background: #333;
   color: #f0f0f0;
   border-bottom: 1px solid #444;
 }
@@ -403,13 +403,11 @@ body.dark-mode #chat-toggle {
   background: #c7d2fe;
 }
 
-@media (prefers-color-scheme: dark) {
-  .game-options li {
-    background: #374151;
-    color: #f0f0f0;
-  }
+body.dark-mode .game-options li {
+  background: #374151; /* slate-700 */
+  color: #f0f0f0;
+}
 
-  .game-options li:hover {
-    background: #4b5563;
-  }
+body.dark-mode .game-options li:hover {
+  background: #4b5563; /* slate-600 */
 }
