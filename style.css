@@ -23,10 +23,6 @@ body.dark-mode a {
   color: #9ecbff;
 }
 
-#dark-mode-toggle:hover {
-  transform: scale(1.2);
-}
-
 body.dark-mode {
   background-color: #1e1e1e;
   color: #f0f0f0;
@@ -255,6 +251,10 @@ body {
   cursor: pointer;
   padding: 0.5rem;
   transition: transform 0.3s ease;
+}
+
+.top-button-container button:hover {
+  transform: scale(1.2);
 }
 
 @media (max-width: 600px) {
