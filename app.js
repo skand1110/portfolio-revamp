@@ -94,7 +94,7 @@ chatOptions.addEventListener("click", (e) => {
       chatMessages.innerHTML = `
         <p>Let's play a game of Two Truths and a Lie. Click on the one you think is the lie:</p>
         <ul class="game-options">
-          <li data-truth="false">Skand has a green belt in Choi Kwang Do martial art</li>
+          <li data-truth="false">Skand holds a green belt in Choi Kwang Do</li>
           <li data-truth="true">Skand has a podcast where she reads Shakespeare's works</li>
           <li data-truth="true">Skand can identify all 196 UN recognised national flags</li>
         </ul>
