@@ -375,8 +375,13 @@ body.dark-mode .chat-messages a {
 }
 
 body.dark-mode .chat-button {
-  background-color: #2563eb; /* Blue-600 for dark mode contrast */
+  background-color: #2563eb; 
   color: white;
+}
+
+body.dark-mode #chat-toggle {
+  background: #f0f0f0;   
+  color: #1e1e1e;         
 }
 
 .game-options {
