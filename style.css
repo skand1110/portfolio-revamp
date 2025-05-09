@@ -243,3 +243,25 @@ body {
   opacity: 1;
   transform: scaleX(1);
 }
+
+#top-buttons {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem; /* spacing between buttons */
+  z-index: 1000;
+}
+
+#top-buttons button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#top-buttons button:hover {
+  transform: scale(1.2);
+}
+
