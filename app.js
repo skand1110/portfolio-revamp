@@ -55,56 +55,47 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   });
 
-//chatbot code logic
-const toggle = document.getElementById("chatbot-toggle");
-const box = document.getElementById("chatbot-box");
-const messages = document.getElementById("chatbot-messages");
-const input = document.getElementById("chatbot-input");
+  // Chatbot logic
+  const chatToggle = document.getElementById("chat-toggle");
+  const chatWindow = document.getElementById("chat-window");
+  const chatClose = document.getElementById("chat-close");
+  const chatMessages = document.querySelector(".chat-messages");
+  const chatOptions = document.getElementById("chat-options");
 
-toggle.addEventListener("click", () => {
-  box.classList.toggle("hidden");
-  if (!box.classList.contains("hidden") && messages.childNodes.length === 0) {
-    addBotMessage("Hi there! Are you a recruiter, someone who knows me, or just browsing?");
-  }
-});
-
-input.addEventListener("keypress", (e) => {
-  if (e.key === "Enter") {
-    const userText = input.value.trim().toLowerCase();
-    if (!userText) return;
-    addUserMessage(input.value);
-    input.value = "";
-
-    if (userText.includes("recruiter")) {
-      addBotMessage("Awesome! Here's my resume: [link] and a quick summary of my skills...");
-    } else if (userText.includes("know") || userText.includes("friend")) {
-      addBotMessage("That's lovely! Want to leave a message for me? Type it below.");
-      // Hook to send via EmailJS later
-    } else {
-      const funFacts = [
-        "I once sold ₹12k worth of art in one month!",
-        "I love writing poems and product essays.",
-        "I build things that blend tech and creativity."
-      ];
-      const random = funFacts[Math.floor(Math.random() * funFacts.length)];
-      addBotMessage(random);
+  chatToggle.addEventListener("click", () => {
+    chatWindow.classList.toggle("open");
+    if (chatWindow.classList.contains("open")) {
+      chatMessages.innerHTML = `<p>Hello! Who do I have the pleasure of chatting with today?</p>`;
+      chatOptions.style.display = "block";
     }
-  }
-});
+  });
 
-function addBotMessage(msg) {
-  const div = document.createElement("div");
-  div.textContent = "🤖 " + msg;
-  div.style.margin = "0.5rem 0";
-  messages.appendChild(div);
-}
+  chatClose.addEventListener("click", () => {
+    chatWindow.classList.remove("open");
+  });
 
-function addUserMessage(msg) {
-  const div = document.createElement("div");
-  div.textContent = "🧑 " + msg;
-  div.style.textAlign = "right";
-  messages.appendChild(div);
-}
+  chatOptions.addEventListener("click", (e) => {
+    if (e.target.classList.contains("chat-button")) {
+      const role = e.target.dataset.role;
+
+      if (role === "recruiter") {
+        chatMessages.innerHTML += `<p>Welcome, recruiter! Here's my <a href="YOUR_RESUME_LINK" target="_blank">resume</a> and a quick look at my skills: product strategy, UX design, market research, and execution.</p>`;
+      } else if (role === "passerby") {
+        const facts = [
+          "I once ran an art business that made ₹12K in a month!",
+          "I'm a top Product Fellow from NextLeap.",
+          "I'm obsessed with good UX and bad puns."
+        ];
+        const fact = facts[Math.floor(Math.random() * facts.length)];
+        chatMessages.innerHTML += `<p>Hi there! Fun fact: ${fact}</p>`;
+      } else {
+        chatMessages.innerHTML += `<p>It was lovely meeting you. Thanks for stopping by!</p>`;
+      }
+
+      chatOptions.style.display = "none"; // Hide options after one use
+    }
+  });
+
 
 
 });
