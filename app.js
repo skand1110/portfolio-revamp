@@ -12,44 +12,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fadeElems.forEach(el => observer.observe(el));
 
-  // Dark mode toggle logic
-  const toggle = document.getElementById("dark-mode-toggle");
-  if (toggle) {
-    toggle.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-    });
-  }
+    // Icon and toggle logic
+  const darkToggle = document.getElementById("dark-mode-toggle");
+  const audioToggle = document.getElementById("play-audio");
+  const darkIcon = darkToggle.querySelector("i");
+  const audioIcon = audioToggle.querySelector("i");
 
-  //audio play logic
+  // Dark mode toggle with icon swap
+  darkToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    if (document.body.classList.contains("dark-mode")) {
+      darkIcon.classList.replace("fa-moon", "fa-sun");
+    } else {
+      darkIcon.classList.replace("fa-sun", "fa-moon");
+    }
+  });
+
+  // Audio toggle with icon swap
   let isSpeaking = false;
   let utterance = null;
-  
-document.getElementById('play-audio').addEventListener('click', () => {
-  if (isSpeaking) {
-    speechSynthesis.cancel();
-    isSpeaking = false;
-    return;
-  }
 
-  const textToRead = document.body.innerText; // Or a specific element’s text
-  utterance = new SpeechSynthesisUtterance(textToRead);
-  utterance.lang = 'en-US';
-  utterance.rate = 1;
+  audioToggle.addEventListener("click", () => {
+    if (isSpeaking) {
+      speechSynthesis.cancel();
+      isSpeaking = false;
+      audioIcon.classList.replace("fa-volume-mute", "fa-volume-up");
+      return;
+    }
 
-  // Pick a specific voice 
-  const voices = speechSynthesis.getVoices();
-  const preferredVoice = voices.find(voice => voice.name.includes("Female") || voice.name.includes("Google US English"));
+    const textToRead = document.body.innerText;
+    utterance = new SpeechSynthesisUtterance(textToRead);
+    utterance.lang = 'en-US';
+    utterance.rate = 1;
 
-  if (preferredVoice) {
-    utterance.voice = preferredVoice;
-  }
+    speechSynthesis.speak(utterance);
+    isSpeaking = true;
+    audioIcon.classList.replace("fa-volume-up", "fa-volume-mute");
 
-  speechSynthesis.speak(utterance);
-  isSpeaking = true;
-  utterance.onend = () => {
-    isSpeaking = false;
-  };
-});
+    utterance.onend = () => {
+      isSpeaking = false;
+      audioIcon.classList.replace("fa-volume-mute", "fa-volume-up");
+    };
+  });
+
 
 
 });
