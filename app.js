@@ -85,7 +85,7 @@ chatOptions.addEventListener("click", (e) => {
 
     if (role === "recruiter") {
       response = `<p>Welcome, recruiter! Here's my <a href="assets/Skand_Sharma_Resume.pdf" 
-      target="_blank">resume</a> and a quick look at my skills: product strategy, UX design, market research, and execution.</p>`;
+      target="_blank">resume</a> and a quick look at my skills: product strategy, UX design, market research, and execution. Thanks for stopping by!</p>`;
       chatMessages.innerHTML = response;
       chatOptions.style.display = "none";
 
