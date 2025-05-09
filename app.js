@@ -113,7 +113,7 @@ chatOptions.addEventListener("click", (e) => {
         }
       });
     } else {
-      response = `<p>It was lovely meeting you. Thanks for stopping by!</p>`;
+      response = `<p>Hey Batman, It was lovely meeting you. Thanks for stopping by!</p>`;
       chatMessages.innerHTML = response;
       chatOptions.style.display = "none";
     }
