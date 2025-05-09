@@ -85,26 +85,40 @@ chatOptions.addEventListener("click", (e) => {
 
     if (role === "recruiter") {
       response = `<p>Welcome, recruiter! Here's my <a href="YOUR_RESUME_LINK" target="_blank">resume</a> and a quick look at my skills: product strategy, UX design, market research, and execution.</p>`;
+      chatMessages.innerHTML = response;
+      chatOptions.style.display = "none";
+
     } else if (role === "passerby") {
-      response = `
-        <p>Let's play a quick game of Two Truths and a Lie:</p>
-        <ul>
-          <li>Skand has a green belt in Choi Kwang Do</li>
-          <li>Skand has a podcast where she reads Shakespeare's works</li>
-          <li>Skand can identify all 196 UN recognised national flags</li>
+      // Set up interactive game
+      chatMessages.innerHTML = `
+        <p>Let's play a game of Two Truths and a Lie. Click on the one you think is the lie:</p>
+        <ul class="game-options">
+          <li data-truth="false">Skand has a green belt in Choi Kwang Do</li>
+          <li data-truth="true">Skand has a podcast where she reads Shakespeare's works</li>
+          <li data-truth="true">Skand can identify all 196 UN recognised national flags</li>
         </ul>
-        <p>Which one do you think is the lie?</p>
-        <p>It was lovely meeting you. Thanks for stopping by!</p>
       `;
+      chatOptions.style.display = "none";
+
+      // Add event listener to game options
+      document.querySelector(".game-options").addEventListener("click", (event) => {
+        if (event.target.tagName === "LI") {
+          const isTruth = event.target.dataset.truth === "true";
+          if (isTruth) {
+            chatMessages.innerHTML = `<p>Whoopsie! That's actually true. But hey, great try! It was lovely meeting you — thanks for stopping by 😄</p>`;
+          } else {
+            chatMessages.innerHTML = `<p>🎉 Woah, you're correct! Nice catch. That one *was* the lie. Glad we met — thanks for popping in!</p>`;
+          }
+        }
+      });
     } else {
       response = `<p>It was lovely meeting you. Thanks for stopping by!</p>`;
+      chatMessages.innerHTML = response;
+      chatOptions.style.display = "none";
     }
-
-    // Replace initial message
-    chatMessages.innerHTML = response;
-    chatOptions.style.display = "none";
   }
 });
+
 
 
 
