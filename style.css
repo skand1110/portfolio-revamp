@@ -139,8 +139,6 @@ body {
 .card img {
   width: 100%;
   height: auto;
-
-
 }
 
 .card a {
@@ -258,9 +256,17 @@ body {
   transition: transform 0.3s ease;
 }
 
-.top-button-container button:hover {
-  transform: scale(1.2);
-}
+@media (max-width: 600px) {
+  .top-button-container {
+    top: 0.5rem;
+    right: 0.5rem;
+    gap: 0.25rem;
+  }
 
+  .top-button-container button {
+    font-size: 1rem;
+    padding: 0.25rem;
+  }
+}
 
 
