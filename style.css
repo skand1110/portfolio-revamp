@@ -249,6 +249,8 @@ body {
   top: 1rem;
   right: 1rem;
   display: flex;
+  flex-direction: row;
+  align-items: center;
   gap: 0.5rem; /* spacing between buttons */
   z-index: 1000;
 }
@@ -264,4 +266,5 @@ body {
 #top-buttons button:hover {
   transform: scale(1.2);
 }
+
 
