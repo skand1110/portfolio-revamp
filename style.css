@@ -244,27 +244,27 @@ body {
   transform: scaleX(1);
 }
 
-#top-buttons {
+.top-button-container {
   position: fixed;
   top: 1rem;
   right: 1rem;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.5rem; /* spacing between buttons */
+  gap: 0.5rem;
   z-index: 1000;
 }
 
-#top-buttons button {
+.top-button-container button {
   background: none;
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
+  padding: 0.5rem;
   transition: transform 0.3s ease;
 }
 
-#top-buttons button:hover {
+.top-button-container button:hover {
   transform: scale(1.2);
 }
+
 
 
