@@ -250,6 +250,7 @@ body {
 .top-button-container button {
   background: none;
   border: none;
+  color: inherit;
   font-size: 1.5rem;
   cursor: pointer;
   padding: 0.5rem;
@@ -266,6 +267,7 @@ body {
   .top-button-container button {
     font-size: 1rem;
     padding: 0.25rem;
+    color: inherit;
   }
 }
 
