@@ -55,6 +55,56 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   });
 
+//chatbot code logic
+const toggle = document.getElementById("chatbot-toggle");
+const box = document.getElementById("chatbot-box");
+const messages = document.getElementById("chatbot-messages");
+const input = document.getElementById("chatbot-input");
+
+toggle.addEventListener("click", () => {
+  box.classList.toggle("hidden");
+  if (!box.classList.contains("hidden") && messages.childNodes.length === 0) {
+    addBotMessage("Hi there! Are you a recruiter, someone who knows me, or just browsing?");
+  }
+});
+
+input.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    const userText = input.value.trim().toLowerCase();
+    if (!userText) return;
+    addUserMessage(input.value);
+    input.value = "";
+
+    if (userText.includes("recruiter")) {
+      addBotMessage("Awesome! Here's my resume: [link] and a quick summary of my skills...");
+    } else if (userText.includes("know") || userText.includes("friend")) {
+      addBotMessage("That's lovely! Want to leave a message for me? Type it below.");
+      // Hook to send via EmailJS later
+    } else {
+      const funFacts = [
+        "I once sold ₹12k worth of art in one month!",
+        "I love writing poems and product essays.",
+        "I build things that blend tech and creativity."
+      ];
+      const random = funFacts[Math.floor(Math.random() * funFacts.length)];
+      addBotMessage(random);
+    }
+  }
+});
+
+function addBotMessage(msg) {
+  const div = document.createElement("div");
+  div.textContent = "🤖 " + msg;
+  div.style.margin = "0.5rem 0";
+  messages.appendChild(div);
+}
+
+function addUserMessage(msg) {
+  const div = document.createElement("div");
+  div.textContent = "🧑 " + msg;
+  div.style.textAlign = "right";
+  messages.appendChild(div);
+}
 
 
 });
