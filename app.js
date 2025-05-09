@@ -21,12 +21,35 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   //audio play logic
-  document.getElementById('play-audio').addEventListener('click', () => {
-  const content = document.body.innerText; 
-  const utterance = new SpeechSynthesisUtterance(content);
-  utterance.lang = 'en-US'; 
+  let isSpeaking = false;
+  let utterance = null;
+
+document.getElementById('play-audio').addEventListener('click', () => {
+  if (isSpeaking) {
+    speechSynthesis.cancel();
+    isSpeaking = false;
+    return;
+  }
+
+  const textToRead = document.body.innerText; // Or a specific element’s text
+  utterance = new SpeechSynthesisUtterance(textToRead);
+  utterance.lang = 'en-US';
   utterance.rate = 1;
+
+  // Pick a specific voice 
+  const voices = speechSynthesis.getVoices();
+  const preferredVoice = voices.find(voice => voice.name.includes("Female") || voice.name.includes("Google US English"));
+
+  if (preferredVoice) {
+    utterance.voice = preferredVoice;
+  }
+
   speechSynthesis.speak(utterance);
+  isSpeaking = true;
+
+  utterance.onend = () => {
+    isSpeaking = false;
+  };
 });
 
 });
