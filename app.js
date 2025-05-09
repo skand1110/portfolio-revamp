@@ -19,4 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.toggle("dark-mode");
     });
   }
+
+  //audio play logic
+  document.getElementById('play-audio').addEventListener('click', () => {
+  const content = document.body.innerText; 
+  const utterance = new SpeechSynthesisUtterance(content);
+  utterance.lang = 'en-US'; 
+  utterance.rate = 1;
+  speechSynthesis.speak(utterance);
+});
+
 });
