@@ -56,45 +56,56 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Chatbot logic
-  const chatToggle = document.getElementById("chat-toggle");
-  const chatWindow = document.getElementById("chat-window");
-  const chatClose = document.getElementById("chat-close");
-  const chatMessages = document.querySelector(".chat-messages");
-  const chatOptions = document.getElementById("chat-options");
+const chatToggle = document.getElementById("chat-toggle");
+const chatWindow = document.getElementById("chat-window");
+const chatClose = document.getElementById("chat-close");
+const chatMessages = document.querySelector(".chat-messages");
+const chatOptions = document.getElementById("chat-options");
 
-  chatToggle.addEventListener("click", () => {
-    chatWindow.classList.toggle("open");
-    if (chatWindow.classList.contains("open")) {
-      chatMessages.innerHTML = `<p>Hello! Who do I have the pleasure of chatting with today?</p>`;
-      chatOptions.style.display = "block";
+function showInitialPrompt() {
+  chatMessages.innerHTML = `<p>Hello! Who do I have the pleasure of chatting with today?</p>`;
+  chatOptions.style.display = "block";
+}
+
+chatToggle.addEventListener("click", () => {
+  chatWindow.classList.toggle("open");
+  if (chatWindow.classList.contains("open")) {
+    showInitialPrompt();
+  }
+});
+
+chatClose.addEventListener("click", () => {
+  chatWindow.classList.remove("open");
+});
+
+chatOptions.addEventListener("click", (e) => {
+  if (e.target.classList.contains("chat-button")) {
+    const role = e.target.dataset.role;
+    let response = "";
+
+    if (role === "recruiter") {
+      response = `<p>Welcome, recruiter! Here's my <a href="YOUR_RESUME_LINK" target="_blank">resume</a> and a quick look at my skills: product strategy, UX design, market research, and execution.</p>`;
+    } else if (role === "passerby") {
+      response = `
+        <p>Let's play a quick game of Two Truths and a Lie:</p>
+        <ul>
+          <li>Skand has a green belt in Choi Kwang Do</li>
+          <li>Skand has a podcast where she reads Shakespeare's works</li>
+          <li>Skand can identify all 196 UN recognised national flags</li>
+        </ul>
+        <p>Which one do you think is the lie?</p>
+        <p>It was lovely meeting you. Thanks for stopping by!</p>
+      `;
+    } else {
+      response = `<p>It was lovely meeting you. Thanks for stopping by!</p>`;
     }
-  });
 
-  chatClose.addEventListener("click", () => {
-    chatWindow.classList.remove("open");
-  });
+    // Replace initial message
+    chatMessages.innerHTML = response;
+    chatOptions.style.display = "none";
+  }
+});
 
-  chatOptions.addEventListener("click", (e) => {
-    if (e.target.classList.contains("chat-button")) {
-      const role = e.target.dataset.role;
-
-      if (role === "recruiter") {
-        chatMessages.innerHTML += `<p>Welcome, recruiter! Here's my <a href="YOUR_RESUME_LINK" target="_blank">resume</a> and a quick look at my skills: product strategy, UX design, market research, and execution.</p>`;
-      } else if (role === "passerby") {
-        const facts = [
-          "I once ran an art business that made ₹12K in a month!",
-          "I'm a top Product Fellow from NextLeap.",
-          "I'm obsessed with good UX and bad puns."
-        ];
-        const fact = facts[Math.floor(Math.random() * facts.length)];
-        chatMessages.innerHTML += `<p>Hi there! Fun fact: ${fact}</p>`;
-      } else {
-        chatMessages.innerHTML += `<p>It was lovely meeting you. Thanks for stopping by!</p>`;
-      }
-
-      chatOptions.style.display = "none"; // Hide options after one use
-    }
-  });
 
 
 
