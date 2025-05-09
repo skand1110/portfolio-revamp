@@ -368,7 +368,6 @@ body.dark-mode .chat-header {
 body.dark-mode .chat-header button{
   background: none;
   color: #f0f0f0;
-  border-bottom: 1px solid #444;
 }
 
 body.dark-mode .chat-messages a {
