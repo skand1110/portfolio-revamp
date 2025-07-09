@@ -411,3 +411,30 @@ body.dark-mode .game-options li {
 body.dark-mode .game-options li:hover {
   background: #4b5563; /* slate-600 */
 }
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 2.5rem 1rem;
+    text-align: left;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 90%;
+    margin: 1rem auto 0;
+    padding: 0 0.5rem;
+    text-align: left;
+  }
+
+  .hero p a {
+    display: inline-block;
+    word-break: break-word;
+  }
+}
+
