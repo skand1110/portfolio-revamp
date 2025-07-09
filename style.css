@@ -415,7 +415,7 @@ body.dark-mode .game-options li:hover {
 @media (max-width: 600px) {
   .hero {
     padding: 2.5rem 1rem;
-    text-align: left;
+    text-align: center;
   }
 
   .hero h1 {
@@ -429,7 +429,7 @@ body.dark-mode .game-options li:hover {
     max-width: 90%;
     margin: 1rem auto 0;
     padding: 0 0.5rem;
-    text-align: left;
+    text-align: center;
   }
 
   .hero p a {
